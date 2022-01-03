@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6{
         }
 
 .hero-banner{
-    background-image: url(./pictures/wizardStudent.jpeg);
+    background-image: url(./pictures/Camp3-2.png);
     
     display: grid;
 
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: -50vh;
+    background-position-y:  -35vh;
 
     height: 32vh;
 }
