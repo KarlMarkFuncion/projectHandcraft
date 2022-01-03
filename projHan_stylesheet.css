@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     --textColor: rgb(245, 255, 247);
     --bgColor1: rgb(14, 13, 20);
@@ -23,6 +26,12 @@ h1{
     font-size: 60px;
 }
 img{
+    margin: 0;
+}
+
+/* -------------------------------------------------------- */
+
+.view-port{
     margin: 0;
 }
 
@@ -341,9 +350,79 @@ button:hover{
     color: var(--textColor);
     outline: 2px solid var(--accentColor);
 }
+/* ---------------------------------------------------------------- */
 
-.social-media img{
-    height: 100px;
-    width: 100px;
-    padding-top: 5vh;
+.footer{
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+
+    font-stretch: condensed;
+    margin: 10% 3% 2% ;
+
 }
+.social-media{
+    display: grid;
+
+    padding-top: 3vh;
+
+}
+    .social-media ul{
+        
+        margin: 0%;
+        padding: 0%;
+
+        padding-top: 4%;
+    }
+    .social-media ul li{
+        list-style-type: none;
+        display: inline;
+
+        padding-left: 2vw;
+
+
+        align-items: center;
+
+    }
+    .social-media li:not(:first-child):before {
+        content: "/";
+
+        font-size: 600%;
+
+        font-weight: lighter;
+        
+        padding-right: 2vw;
+
+        opacity: 50%;
+    }
+    .foot-links{
+        display: grid;
+    
+        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    
+        width: 100%;
+    
+        grid-template-rows: 1fr;
+    
+        align-items: center;
+    
+        justify-content:end;
+    
+        margin-top: 10%;
+    
+    }
+    .footer a{
+        text-decoration: none;
+        color: var(--textColor);
+        opacity: 50%;
+    }
+    .footer a:hover{
+        opacity: 100%;
+    }
+    .foot-link{
+        font-weight: lighter;
+    }
+    .footer-logo{
+        font-size: 200%;
+    }
