@@ -12,6 +12,10 @@ body{
     --bgColor3:rgb(27, 27, 27);
     --accentColor: orange;
 
+    --slowLinks: 0.25s;
+    --fastLinks: 0.045s;
+    --standardAnimSpd: 0.5s;
+
     --bordProperties: solid 2px var(--bgColor1);
 
     background-color: var(--bgColor1);
@@ -32,6 +36,8 @@ h1{
 }
 img{
     margin: 0;
+
+    border-radius: 8px;
 }
 p{
     font-size: 18px;
@@ -50,13 +56,32 @@ h1, h2, h3, h4, h5, h6{
     justify-content: center;
     align-items: center;
 
+    width: 100%;
+
+    padding: none;
+    margin: none;
+
     height: 6vh;
 
-    background-color: var(--bgColor3);
+    background-color: var(--bgColor1);
 
-    top: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
 
+    z-index: 1;
 }
+    .nav-bar nav{
+        
+
+        padding: 1em 5em 1em;
+
+        opacity: 100%;
+
+        transition: opacity var(--slowLinks);
+
+        border-radius: 0% 0% 8px 8px;
+    }
     .nav-bar a{
         text-decoration: none;
         color: var(--textColor);
@@ -86,16 +111,15 @@ h1, h2, h3, h4, h5, h6{
 
         /* Turn each text item here to be perfectly centered */
     
-        margin-left: .6em;
-        margin-right: .6em;
+        margin: 0 0.6em 0;
     
         font-size: 16px;
         
-        transition: transform .5s;
+        transition: color ease var(--fastLinks);
      }
-     .banner:hover {
-        transform: translateY(-2px);
-    }
+        .banner:hover {
+            color: var(--accentColor);
+        }
     
 /* ----------HERO BANNER AND LANDING PAGE STYLING---------- */
 
@@ -109,8 +133,6 @@ h1, h2, h3, h4, h5, h6{
     line-height: 0.5vh;
 
 }
-
-
     .landing-text h1, .landing-text h2{
         letter-spacing: 0.1em;
     }
@@ -123,7 +145,7 @@ h1, h2, h3, h4, h5, h6{
 }
     .hover_head span{
         background-color: black ;
-        transition: .5s;
+        transition: var(--slowLinks);
         width: 100;
 
         padding:10px;
@@ -157,7 +179,7 @@ h1, h2, h3, h4, h5, h6{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y:  -35vh;
+    background-position-y:  -10vh;
 
     height: 32vh;
 }
@@ -243,7 +265,7 @@ h1, h2, h3, h4, h5, h6{
 
         object-fit: cover;
 
-        transition: transform .5s;
+        transition: var(--standardAnimSpd);
 
         border: var(--bordProperties) ;
     }
@@ -277,7 +299,7 @@ h1, h2, h3, h4, h5, h6{
 
     object-fit: cover;
 
-    transition: transform 0.5s;
+    transition: transform var(--standardAnimSpd);
 
     border: var(--bordProperties) ;
 
@@ -461,7 +483,7 @@ button:hover{
         .social-media a{
             opacity: 50%;
 
-            transition: opacity .25s;
+            transition: opacity ease-out var(--slowLinks);
         }
         .social-media a:hover{
             opacity: 100%;
@@ -487,7 +509,7 @@ button:hover{
         .foot-links a{
             opacity: 50%;
 
-            transition: ease .045s;
+            transition: opacity ease var(--fastLinks);
         }
             .foot-links a:hover{
                 opacity: 100%;
