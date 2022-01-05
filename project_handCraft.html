@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link rel="stylesheet" href="./projHan_stylesheet.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project_HandCraft</title>
-    <link rel="stylesheet" href="./projHan_stylesheet.css">
+    
 </head>
 
 <body>
+    
+    <a name="top"></a>
 
+    <script src="projHan_script.js"></script>
     
         <!-- !!! ANIMATE THE CAMP2-3 HERO BANNER IN CSP !!! -->
             <!-- ADD A LEFT-RIGHT IMAGE GALLERY SELECTION TO MY HERO BANNER -->
@@ -31,14 +37,15 @@
             <!-- REDO THE HOVER EFFECTS TO LOOK LIKE CORY HUGHART, BUT NOT TO WORK LIKE HIS-->
                     <!-- Add a circle Background element when the div in question is on screen -->
             <nav>
-                <a href="" class="banner">Home</a>
-                <a href="" class="banner">Portfolio</a>
-                <a href="" class="banner">About</a>
-                <a href="" class="banner">Contact Page</a>
+                <a href="#home" class="banner">Home</a>
+                <a href="#portfolio" class="banner">Portfolio</a>
+                <a href="#about" class="banner">About</a>
+                <a href="#contact" class="banner">Contact Page</a>
             </nav>
         </div>
 
-        <section class="content "><!--This will be a grid box -->
+        <a name="home"></a>
+        <section class="content"><!--This will be a grid box -->
             <div class="text-box">
                 <div class="text">
     
@@ -64,9 +71,43 @@
                 <img src="./pictures/256349369_1091545141585591_4247379099015110296_n.png" alt="picure4">
             </div>
         </section>
-        <section class="content altbg about">
+
+
+            <!-- ADD A SLIDER WHICH ALLOWS ME TO VIEW A LARGE PHOTO OF MY WORKS LIKE A BIG
+                    GALLERY -->
+        <a name="portfolio"></a>
+        <section class="content altbg">
             <div class="text-box">
                 <div class="text alttxt">
+    
+                    <img src="./pictures/Liz upsized.png" alt="animated-Gif">
+    
+                    <h1>Some of my Works</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Nullam non nisi est sit amet facilisis magna etiam
+                        tempor. Sit amet cursus sit amet dictum. Dictum sit amet
+                        justo donec enim diam vulputate.
+                    </p>
+                </div>
+            </div>
+            <div class="port-gallery">
+                <!-- Add a pop-up /responsive gallery with javascript function here.-->
+                <!-- Add a hovering animaton telling what the project name is on hover -->
+    
+    
+                <img src="./pictures/Zelda and Link Fanart - 3.png" alt="picture1">
+                <img src="./pictures/Camp3.png" alt="picture2">
+                <img src="./pictures/Noelle Finished.png" alt="picture3">
+    
+            </div>
+        </section>
+
+        <a name="about"></a>
+        <section class="content">
+            <div class="text-box">
+                <div class="text ">
                     
                     <img src="./pictures/Jes upsized.png" alt="animated-Gif">
     
@@ -103,35 +144,10 @@
                 <img src="./pictures/heMan.png" alt="picure4">
             </div>
         </section>
-        <section class="content portfolio">
-            <div class="text-box">
-                <div class="text">
-    
-                    <img src="./pictures/Liz upsized.png" alt="animated-Gif">
-    
-                    <h1>Some of my Works</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Nullam non nisi est sit amet facilisis magna etiam
-                        tempor. Sit amet cursus sit amet dictum. Dictum sit amet
-                        justo donec enim diam vulputate.
-                    </p>
-                </div>
-            </div>
-            <div class="port-gallery">
-                <!-- Add a pop-up /responsive gallery with javascript function here.-->
-                <!-- Add a hovering animaton telling what the project name is on hover -->
-    
-    
-                <img src="./pictures/Zelda and Link Fanart - 3.png" alt="picture1">
-                <img src="./pictures/Camp3.png" alt="picture2">
-                <img src="./pictures/Noelle Finished.png" alt="picture3">
-    
-            </div>
-        </section>
 
-        <div class="altbg contact-page">
+
+        <a  name="contact"></a>
+        <div class="altbg contact-page ">
             <div class="text-box alttxt">
                 
                 <div class="text text-form">
@@ -184,7 +200,7 @@
 
                 <div class="back-to-top-container">
                     <div class="back-to-top">
-                        <a href="#hero-banner">
+                        <a href="#top">
                             <!--<img class="arrow-up" src="./pictures/arrow_up.svg" alt="">-->
                             <p>back to top</p>
                             
@@ -195,7 +211,7 @@
                     <!-- REPLACE WITH GITHUB, TWITTER, AND GMAIL LOGOS -->  
                     <!-- REPLACE THE POSITION OF THE DIVIDING SLASHES TO BE CENTERED ON THE LOGOS. -->  
                 <div class="social-media">
-                    <a href=""><img src="./pictures/Jes upsized.png" alt="animated-Gif"></a>
+                    <a href="twitter.com/km_func" target="blank"><img src="./pictures/Jes upsized.png" alt="animated-Gif"></a>
                     <p class="divider">/</p>
                     <a href=""><img src="./pictures/Liz upsized.png" alt="animated-Gif"></a>
                     <p class="divider">/</p>
@@ -204,12 +220,14 @@
                     <a href=""><img src="./pictures/Liz upsized.png" alt="animated-Gif"></a>
                 </div>                                   
 
+
+                <!-- THESE ARE TEMPORARY LINKS, EACH LINK WILL HAVE A PROPER PAGE-->
                 <div class="foot-links">
-                        <h3 class="foot-link"> <a href=""> services </a> </h3>
-                        <h3 class="foot-link"> <a href=""> portfolio </a> </h3>
-                        <h3 class="foot-logo"> <a href=""> Project_Handcraft </a> </h3>
-                        <h3 class="foot-link"> <a href=""> story </a> </h3>
-                        <h3 class="foot-link"> <a href=""> contact me </a> </h3>
+                        <h3 class="foot-link"> <a href="#contact"> services </a> </h3>
+                        <h3 class="foot-link"> <a href="#portfolio"> portfolio </a> </h3>
+                        <h3 class="foot-logo"> <a href="#top"> Project_Handcraft </a> </h3>
+                        <h3 class="foot-link"> <a href="#about"> story </a> </h3>
+                        <h3 class="foot-link"> <a href="#contact"> contact me </a> </h3>
 
                 </div>
             </div>

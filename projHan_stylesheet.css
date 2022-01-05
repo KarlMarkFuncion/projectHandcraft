@@ -30,6 +30,10 @@ body{
 
     height: 100%;
     width: 100%;
+
+    /*clean up the inherucatbace of typography, colorm and the 
+            variables for repeteive stuff like animation times
+            and border radius*/
 }
 h1{
     font-size: 60px;
@@ -51,16 +55,15 @@ h1, h2, h3, h4, h5, h6{
 /* -----------------NAVBAR STYLING------------------ */
 
 .nav-bar{
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
     width: 100%;
 
     padding: none;
     margin: none;
 
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     height: 6vh;
 
     background-color: var(--bgColor1);
@@ -88,6 +91,7 @@ h1, h2, h3, h4, h5, h6{
         padding-left: 10px;
         padding-right: 10px;
     }
+        
     .nav-bar-transparent{
         display: grid;
         align-content: center;
@@ -115,10 +119,25 @@ h1, h2, h3, h4, h5, h6{
     
         font-size: 16px;
         
+        padding: 2px;
+
         transition: color ease var(--fastLinks);
      }
         .banner:hover {
             color: var(--accentColor);
+            
+            border-radius: 10px;
+            height: .1vw;
+            width: .1vw;
+            background-color: var(--bgColor2)
+        }
+        .active{
+            background-color: var(--bgColor2);
+
+            background-size: 120%;
+
+            border-radius: 10px;
+            background-color: var(--bgColor2)
         }
     
 /* ----------HERO BANNER AND LANDING PAGE STYLING---------- */
