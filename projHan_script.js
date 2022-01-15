@@ -1,3 +1,5 @@
+
+/*
 let navbarLinks = document.querySelectorAll("nav a");
 
 // CCOMPLETE THE LISTENER AND .ACTIVE CLASSNAME ADDER FUCTION
@@ -13,3 +15,10 @@ window.addEventListener("scroll", e => {
     }
   });
 });
+*/
+
+document.getElementById("nav-bar")
+
+window.addEventListener("scroll", () => {
+  console.log("changeNavBar")
+})
