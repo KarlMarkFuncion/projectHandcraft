@@ -390,6 +390,7 @@ a{
 
 .slider{
     /* add an image slider function here*/
+    margin: 0;
 }
 
 /* ---------- EMAIL FORM CSS ------------ */
@@ -724,8 +725,8 @@ button:hover{
             line-height: 2em;
         }
         .tri-column div img{
-            height: 300px;
-            width: 300px;
+            height: 20vw;
+            width: 20vw;
             object-fit: cover;
 
             border: var(--bordProperties);
