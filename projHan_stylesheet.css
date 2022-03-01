@@ -10,13 +10,19 @@ body{
     --bgColor1: rgb(15, 14, 19);
     --bgColor2: rgb(71, 70, 78);
     --bgColor3:rgb(27, 27, 27);
-    --accentColor: orange;
+    --accentColor: #ffa500;
+    --accentColor2: #005AFF;
+    --shadowColor1: #ffa600ce;
+    --shadowColor2: #3a85ffc2;
 
     --slowLinks: 0.25s;
     --fastLinks: 0.045s;
     --standardAnimSpd: 0.5s;
 
     --bordProperties: solid 2px var(--bgColor1);
+
+    --bez1: 0.175, 0.885, 0.32, 1.275;
+    --bez2: 0.075, 0.82, 0.165, 1;
 
     background-color: var(--bgColor1);
     margin: 0;
@@ -50,6 +56,9 @@ p{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.1em;
+}
+a{
+    color: var(--accentColor);
 }
 
 /* -----------------NAVBAR STYLING------------------ */
@@ -121,7 +130,9 @@ h1, h2, h3, h4, h5, h6{
         
         padding: 2px;
 
-        transition: color ease var(--fastLinks);
+        transition-property: all;
+        transition-property: cubic-bezier(--bez1);
+        transition-duration: .4s;
      }
         .banner:hover {
             color: var(--accentColor);
@@ -129,10 +140,12 @@ h1, h2, h3, h4, h5, h6{
             border-radius: 10px;
             height: .1vw;
             width: .1vw;
-            background-color: var(--bgColor2)
+            background-color: var(--bgColor3);
+
+            
         }
         .active{
-            background-color: var(--bgColor2);
+            background-color: var(--bgColor3);
 
             background-size: 120%;
 
@@ -155,16 +168,24 @@ h1, h2, h3, h4, h5, h6{
     .landing-text h1, .landing-text h2{
         letter-spacing: 0.1em;
     }
+
+/* --- link for the projectHandcraft span --- */
+
+.span-link{
+    color: var(--textColor);
+}
+
 /* --- custom hover text animation --- */
-.hover_head{
+.hover-head{
     margin-top: 1em;
     margin-bottom: 1em;
 
     
 }
-    .hover_head span{
+    .hover-head span{
         background-color: black ;
         transition: var(--slowLinks);
+        transition-timing-function: cubic-bezier(var(--bez1));
         width: 100;
 
         padding:10px;
@@ -172,7 +193,7 @@ h1, h2, h3, h4, h5, h6{
 
         border: var(--bordProperties);
     }
-        .hover_head span:hover{
+        .hover-head span:hover{
             color: var(--accentColor);
             letter-spacing: 0.2em;
         }
@@ -243,16 +264,52 @@ h1, h2, h3, h4, h5, h6{
     align-content: center;
     
 }
-    .text h1{
+    .text h1, .text h2, .text h3{
         text-align: left;
         text-decoration: underline var(--textColor) 5px;
         text-underline-offset: 15px;
     }
-    .alttxt h1{
+    .alttxt h1, .alttxt h2, .alttxt h3{
         text-align: left;
         text-decoration: underline var(--bgColor1) 7px;
         text-underline-offset: 15px;
     }
+
+.deco-text{
+    opacity: 75%;
+}
+
+.content-link{
+    color: var(--accentColor);
+    letter-spacing: normal;
+    word-spacing: 0.1em;
+    text-align: left;
+
+    opacity: 80%;
+
+    transition-property:letter-spacing opacity ;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: .1s;
+}
+    .content-link:hover{
+    letter-spacing: .05em;
+    opacity: 100%   ;
+    }
+
+/* --------- HEADER COLOR ANIMATION ------- */
+
+.cont-header{
+    transition-property: color;
+    transition-timing-function: cubic-bezier(var(--bez1));
+    transform-origin: left;
+    transition-duration: 0.5s;
+}
+    .cont-header:hover{
+        color: inherit;
+    }
+.alt-header{
+    margin: 0%;
+}
 
 /* --------- IMAGE GALLERY CSS ------------ */
 
@@ -284,9 +341,9 @@ h1, h2, h3, h4, h5, h6{
 
         object-fit: cover;
 
-        transition: var(--standardAnimSpd);
-
         border: var(--bordProperties) ;
+        
+        transition: var(--standardAnimSpd);transition-timing-function: cubic-bezier(var(--bez2));
     }
     .image-gallery img:hover{
         transform: scale(1.05);
@@ -319,6 +376,7 @@ h1, h2, h3, h4, h5, h6{
     object-fit: cover;
 
     transition: transform var(--standardAnimSpd);
+    transition-timing-function: cubic-bezier(var(--bez2));
 
     border: var(--bordProperties) ;
 
@@ -327,6 +385,12 @@ h1, h2, h3, h4, h5, h6{
         transform:scale(1.05);
     }
 
+
+/* -------- IMAGE SLIDER  and Gallery Styling --------- */
+
+.slider{
+    /* add an image slider function here*/
+}
 
 /* ---------- EMAIL FORM CSS ------------ */
 
@@ -338,7 +402,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .email{
-    width: 30vw;
+    width: 100%;
     background-color: var(--bgColor3);
 
     border: var(--bordProperties) ;
@@ -352,24 +416,20 @@ h1, h2, h3, h4, h5, h6{
 
     text-align: left;
 
-    padding-top: 5px;
-    padding-bottom: 4.5px;
-    padding-right: 5px;
-    padding-left: 10px;
+    margin: 0.05em 0 0.5em;
+    margin-left: -10px;
+
+    padding: 5px 10px 5px;
+
 }
 .mbox{
     height: 20vh;
 
-    padding-top: 10px;
-    padding-bottom: 4.5px;
-    padding-right: 5px;
-    padding-left: 10px;
 }
 .form-info{
     display: grid;
 
-    margin-bottom: 2vh;
-    margin-top: 2vh;
+    margin-bottom: 0vh;
 
     line-height: 2.8em;
 
@@ -377,10 +437,16 @@ h1, h2, h3, h4, h5, h6{
 }
 .text-form{
     word-spacing: 0em;
+    text-align: center;
 }
-.text-form h3 {
-    letter-spacing: 0.1em;
-}
+    .text-form h3 {
+        letter-spacing: 0.1em;
+    }
+    .text-form form{
+        text-align: right;
+    }
+
+
 .alt-fi{
     display: inline-block;
     width: 100%;
@@ -388,7 +454,7 @@ h1, h2, h3, h4, h5, h6{
 
 .radio-option{
     border: 2px var(--textColor) solid;
-    width: 40%;
+    width: 42%;
 
 
     padding-top: 50%;
@@ -415,7 +481,8 @@ button{
     outline: 2px solid var(--accentColor);
     color: var(--accentColor);
 
-    transition: all .3s;
+    transition: all .5s;
+    transition-timing-function: cubic-bezier(var(--bez2));
 }
 button:hover{
     background: var(--accentColor);
@@ -514,8 +581,6 @@ button:hover{
 
         margin-top: 1%;
 
-        display: grid;
-
         grid-template-columns: 1fr 1fr 8fr 1fr 1fr;
     
         width: 100%;
@@ -553,4 +618,177 @@ button:hover{
         margin-bottom: 2%;
         letter-spacing: unset;
         font-style: bold;
+    }
+
+
+
+/* ---------------------------------------------*/
+/* ---------- PORTFOLIO PAGE STYLING -----------*/
+/* ---------------------------------------------*/
+
+#portfolio-page{
+    background-image: url("./pictures/Fin_lofiGirl.png");
+}
+.image-slider{
+    width: 100%;
+    height: auto;  
+    margin-bottom: 0.8vh;
+
+    grid-template-columns: 1fr;
+}
+.full-sect{
+    padding: 10vh 0vw 10vh;
+
+    display: grid;
+
+    justify-content: center;
+
+    background-color: var(--bgColor3)
+
+    ;
+}
+    .full-sect h1{
+        font-size: 42px;
+
+        margin-top: -2vh;
+        margin-bottom: 10vh;
+
+        text-decoration: underline var(--textColor) 5px;
+        text-underline-offset: 15px;
+    }
+#full-section-gallery{
+
+    --col-num: 3;
+    --col-gap: 0.8vh;
+    --ro-gap: 0.5vw;
+
+    width: 98vw;
+
+    -webkit-column-count: var(--col-num);
+    -webkit-column-gap: var(--col-gap);
+    -webkit-row-gap: var(--ro-gap);
+    -moz-column-count: var(--col-num);
+    -moz-column-gap: var(--col-gap);
+    -moz-row-gap: var(--ro-gap);
+    column-count: var(--col-num);
+    column-gap: var(--col-gap);
+    row-gap: var(--ro-gap);
+}
+    #full-section-gallery img{
+        width: 100%;
+        height: auto;  
+        margin-bottom: 0.8vh;
+
+        border: var(--bordProperties) ;
+
+        transition: transform var(--standardAnimSpd);
+        transition-timing-function: cubic-bezier(var(--bez2));
+
+    }
+    #full-section-gallery img:hover{
+        transform:scale(1.011);
+    }         
+        
+
+.artstyle-section{
+
+    display: grid;
+
+    justify-content: center;
+
+    padding: 10vh 10vw 10vh;
+
+}
+.tri-column{
+    display: grid;
+
+    align-content: top;
+    align-items: top;
+    justify-content: center;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    
+}
+    .tri-column div{
+    
+    width: 20vw;
+
+    padding: 0 2.5vw 0;
+
+    display: grid;
+    justify-items: center;
+    }
+        .tri-column div h2{
+            text-align: center;
+            line-height: 2em;
+        }
+        .tri-column div img{
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+
+            border: var(--bordProperties);
+
+            transition: transform var(--standardAnimSpd);
+            transition-timing-function: cubic-bezier(var(--bez2));
+            }
+            .tri-column div img:hover{
+                transform:scale(1.05);
+            }
+
+
+/* ---------------------------------------------*/
+/* ---------- CONTACT PAGE STYLING -----------*/
+/* ---------------------------------------------*/
+
+#contact-page{
+    background-image: url(./pictures/wizardStudent.jpeg);
+    background-position-y:  -55vh;
+}
+.alt-content{
+    padding: 10vh 0vw 10vh;
+    margin-left: 0vw;
+
+    display: grid;
+
+    grid-template-columns: 40vw 40vw;
+
+    justify-content: center;
+
+    background-color: var(--bgColor3);
+}
+.contact-page{
+    display: grid;
+    justify-items: center;
+    align-items: top;
+    padding: none;
+}
+    .contact-page h1{
+        text-align: center;
+    }
+
+    .cont-page{
+        width: 100%;
+        margin: none;
+        padding: none;
+    }
+.cont-page input, .cont-page textarea{
+    border-color: var(--textColor);
+    border-width: 1px;
+}
+
+.terms-of-service{
+    width: 30vw;
+    text-align: justify;
+    font-size: 18px;
+    word-spacing: 0.4em;
+    
+    display: grid;
+    justify-items: left;
+}
+    .terms-of-service h2{
+        text-align: center;
+        font-size: 48px;
+        
     }

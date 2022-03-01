@@ -12,26 +12,25 @@
 </head>
 
 <body>
-    
+    <!-- THIS IS A PURE ART PORTFOLIO, SO KEEP IT CENTERED AROUND BEING 
+        ABLE TO SHOWKCASE YOURSELF AS AN ARTIST!-->
     <a name="top"></a>
 
     <script src="projHan_script.js"></script>
     
         <!-- !!! ANIMATE THE CAMP2-3 HERO BANNER IN CSP !!! -->
             <!-- ADD A LEFT-RIGHT IMAGE GALLERY SELECTION TO MY HERO BANNER -->
-            
-        <div class="hero-banner">
+        <div class="hero-banner ">
             <div class="landing">
-
-                    <h2  class="landing-text hover_head"> <span> Loren Ipsum!</span></h2>
-                    <h1  class="landing-text hover_head"> <span>Project HandCraft</span></h1>
-                    <p  class="landing-text hover_head"> <span>Personal Project of KM Funcion</span></p>
+                    <h2  class="landing-text hover-head"><span>Hello There! Welcome to</span></h2>
+                    <h1  class="landing-text hover-head"> <span>Project HandCraft</span></h1>
+                    <p  class="landing-text hover-head"> <span>Personal Project of KM Funcion</span></p>
 
                 
             </div>
         </div>
 
-        <div class="nav-bar">
+        <div class="nav-bar alt-nav-shadows">
             <!-- Make this into a sticky nav that changes from transparent bg to black -->
         
             <!-- REDO THE HOVER EFFECTS TO LOOK LIKE CORY HUGHART, BUT NOT TO WORK LIKE HIS-->
@@ -41,6 +40,7 @@
                 <a href="#portfolio" class="banner">Portfolio</a>
                 <a href="#about" class="banner">About</a>
                 <a href="#contact" class="banner">Contact Page</a>
+                <a href="#terms-and-services" class="banner">Terms of Service</a>
             </nav>
         </div>
 
@@ -51,20 +51,24 @@
     
                     <!-- ADD AN ORANGE WIPE TO THE HEADER ON HOVER WITH BOUNEBACK ANIMATION -->
                     
-                    <h1>Project HandCraft</h1>
+                    <h1 class="cont-header">Project HandCraft</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Nullam non nisi est sit amet facilisis magna etiam
-                        tempor. Sit amet cursus sit amet dictum. Dictum sit amet
-                        justo donec enim diam vulputate.
+                        Welcome to project handcraft, a pretty in depth dive to the world
+                        of Front-End development by a freelance artist named KM Funcion! (that's me!)
+                        This website was done with the express function of testing my skills as a
+                        novice developer as of the time of making and writing this website. As well as
+                        being a beta-test on creating a possible personal portfolio website in the future.
+                        And so, with that, I hope you enjoy scrolling through this small project of mine
+                        called Project Handcraft! :)
                     </p>
+                   <p class="content-link"><a href="">see more about project handcraft</a></p> 
                     
                 </div>
                 
             </div>
             <div class="image-gallery">
                 <!--Finish the image gallery css -->
+                <!-- ADD AN IMAGE LIGHTBOX -->
                 <img src="./pictures/Sketch 5.png" alt="picure4">
                 <img src="./pictures/filia_happy.png" alt="picture1">
                 <img src="./pictures/project_Jinx.png" alt="picture2">
@@ -83,7 +87,7 @@
     
                     <img src="./pictures/Liz upsized.png" alt="animated-Gif">
     
-                    <h1>Some of my Works</h1>
+                    <h1 class="cont-header">Some of my Works</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -91,6 +95,9 @@
                         tempor. Sit amet cursus sit amet dictum. Dictum sit amet
                         justo donec enim diam vulputate.
                     </p>
+
+                    <p class="content-link"><a href="">see more of my art!</a></p>
+
                 </div>
             </div>
             <div class="port-gallery">
@@ -112,7 +119,7 @@
                     
                     <img src="./pictures/Jes upsized.png" alt="animated-Gif">
     
-                    <h1>Who I am</h1>
+                    <h1 class="cont-header">Who I am</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -136,6 +143,8 @@
                         tempor. Sit amet cursus sit amet dictum. Dictum sit amet
                         justo donec enim diam vulputate.
                     </p>
+
+                    <p class="content-link"><a href=""s>full about page here!</a></p>
                 </div>
             </div>
             <div class="image-gallery">
@@ -148,54 +157,34 @@
 
 
         <a  name="contact"></a>
-        <div class="altbg contact-page ">
-            <div class="text-box alttxt">
-                
+        <section class="altbg contact-page ">
+
                 <div class="text text-form">
                     <!--Add bounce animation and a special bounce and down animation to the
                             explamation mark of the header on hover. -->
-                    <h1>Contact me!</h1>
+                    
+                    <div class="text alttxt">
+                        <h1 class="cont-header alt-header">Contact me!</h1>
+
+                        <p class="deco-text">Have a question or wanna work together?</p>
+                    </div>
+
                     <form action="" method="post">
-                        <div class="form-info"> 
-                            First Name: <input class="email" type="text" size="19" name="Contact-Name"> 
-                            Subject: <input class="email" type="text" size="19" name="Contact-Name"> 
-                            Email: <input class="email" type="text" size="19" name="Sender-Email">                       
-                        </div>
                         
+                        <div class="form-info"> 
+                            <input class="email" placeholder="Name" type="text" size="19" name="Contact-Name"> 
+                            <input class="email" placeholder="Email"type="text" size="19" name="Sender-Email">                       
+                    
+                            <textarea name="message" placeholder="Your Message" class="email mbox" cols="30" rows="10"></textarea>
+                        </div>
                        
                         <!-- ADD A EMAIL FORM FUNCTION THAT SENDS TO MY GMAIL! Backend function -->
-    
-                        <div class="form-info alt-fi">
-                            
-                            <h3>What are you looking for?</h3>
-                            
-                            <div class="radio-option">
-                                <input type="radio" name="commission" id="commission">
-                                Artist
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" name="commission" id="commission">
-                                Front-End Developer
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" name="commission" id="commission">
-                                 Programmer  
-                            </div>
-                            
-                            
-                        </div>
-    
-                        
-                        <div class="form-info">
-                            <h3>How can I help?</h3>
-                            Message:
-                            <textarea name="message" class="email mbox" cols="30" rows="10"></textarea>
-                        </div>
+                        <p class="content-link cont-link2"><a href="">Terms of Service</a></p>
                         <button type="submit" class="button" value="submit">SEND</button>
                     </form>
                 </div>  
-          </div>
-        </div>
+
+        </section>
         <div class="footer">
             <div class="footer-container">
 
@@ -212,22 +201,22 @@
                     <!-- REPLACE WITH GITHUB, TWITTER, AND GMAIL LOGOS -->  
                     <!-- REPLACE THE POSITION OF THE DIVIDING SLASHES TO BE CENTERED ON THE LOGOS. -->  
                 <div class="social-media">
-                    <a href="twitter.com/km_func" target="blank"><img src="./pictures/Jes upsized.png" alt="animated-Gif"></a>
+                    <a href="https://twitter.com/km_func" target="_blank"><img src="./pictures/Jes upsized.png" alt="animated-Gif"></a>
                     <p class="divider">/</p>
-                    <a href=""><img src="./pictures/Liz upsized.png" alt="animated-Gif"></a>
+                    <a href="" target="_blank"><img src="./pictures/Liz upsized.png" alt="animated-Gif"></a>
                     <p class="divider">/</p>
-                    <a href=""><img src="./pictures/Jes upsized.png" alt="animated-Gif"></a>
+                    <a href="https://github.com/KM-func" target="_blank"><img src="./pictures/Jes upsized.png" alt="animated-Gif"></a>
                     <p class="divider">/</p>
-                    <a href=""><img src="./pictures/Liz upsized.png" alt="animated-Gif"></a>
+                    <a href="" target="_blank"><img src="./pictures/Liz upsized.png" alt="animated-Gif"></a>
                 </div>                                   
 
 
                 <!-- THESE ARE TEMPORARY LINKS, EACH LINK WILL HAVE A PROPER PAGE-->
                 <div class="foot-links">
-                        <h3 class="foot-link"> <a href="#contact"> services </a> </h3>
+                        <h3 class="foot-link"> <a href="#contact"> terms of service </a> </h3>
                         <h3 class="foot-link"> <a href="#portfolio"> portfolio </a> </h3>
                         <h3 class="foot-logo"> <a href="#top"> Project_Handcraft </a> </h3>
-                        <h3 class="foot-link"> <a href="#about"> story </a> </h3>
+                        <h3 class="foot-link"> <a href="#tos"> about </a> </h3>
                         <h3 class="foot-link"> <a href="#contact"> contact me </a> </h3>
 
                 </div>
