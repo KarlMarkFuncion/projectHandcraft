@@ -426,6 +426,9 @@ a{
 .mbox{
     height: 20vh;
 
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }
 .form-info{
     display: grid;
@@ -777,6 +780,8 @@ button:hover{
 .cont-page input, .cont-page textarea{
     border-color: var(--textColor);
     border-width: 1px;
+
+    padding: 10px 10px 10px;
 }
 
 .terms-of-service{
