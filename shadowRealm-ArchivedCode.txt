@@ -1,0 +1,72 @@
+shadowRealm.txt
+
+
+# THE OLD LANDING-PAGE PORTFOLIO SECTION 
+
+<section class="content altbg">
+            <div class="text-box">
+                <div class="text alttxt">
+    
+                    <img src="./pictures/Liz upsized.png" alt="animated-Gif">
+    
+                    <h1 class="cont-header">Some of my Works</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Nullam non nisi est sit amet facilisis magna etiam
+                        tempor. Sit amet cursus sit amet dictum. Dictum sit amet
+                        justo donec enim diam vulputate.
+                    </p>
+
+                    <p class="content-link"><a href="./project_handCraft-PortfolioPg.html#port-page">see more of my art!</a></p>
+
+                </div>
+            </div>
+            <div class="port-gallery">
+                <!-- Add a pop-up /responsive gallery with javascript function here.-->
+                <!-- Add a hovering animaton telling what the project name is on hover -->
+    
+    
+                <img src="./pictures/Zelda and Link Fanart - 3.png" alt="picture1">
+                <img src="./pictures/Camp3.png" alt="picture2">
+                <img src="./pictures/Noelle Finished.png" alt="picture3">
+    
+            </div>
+        </section>
+
+    # STYLE FOR THIS SECTION
+    .port-gallery{
+    --gap: 20px;
+    --num-col: 3;
+    --row-height:70vh;
+
+
+    width: 100%;
+
+    align-content: center;
+    justify-content: center;
+    
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-col), 1fr);
+
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+.port-gallery img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform var(--standardAnimSpd);
+    transition-timing-function: cubic-bezier(var(--bez2));
+
+    border: var(--bordProperties) ;
+
+}
+    .port-gallery img:hover{
+        transform:scale(1.05);
+    }

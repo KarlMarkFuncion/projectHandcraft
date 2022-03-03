@@ -7,9 +7,10 @@ html{
 }
 body{
     --textColor: rgb(245, 255, 247);
-    --bgColor1: rgb(15, 14, 19);
-    --bgColor2: rgb(71, 70, 78);
+    --bgColor1: rgb(34, 33, 37);
+    --bgColor2: rgb(15, 14, 19);
     --bgColor3:rgb(27, 27, 27);
+    --bgColor4: rgb(71, 70, 78);
     --accentColor: #ffa500;
     --accentColor2: #005AFF;
     --shadowColor1: #ffa600ce;
@@ -59,6 +60,9 @@ h1, h2, h3, h4, h5, h6{
 }
 a{
     color: var(--accentColor);
+}
+section{
+    background-color: var(--bgColor3);
 }
 
 /* -----------------NAVBAR STYLING------------------ */
@@ -294,6 +298,9 @@ a{
     .content-link:hover{
     letter-spacing: .05em;
     opacity: 100%   ;
+    }
+    .alt-cont-link{
+        text-align: center;
     }
 
 /* --------- HEADER COLOR ANIMATION ------- */
@@ -646,9 +653,6 @@ button:hover{
     display: grid;
 
     justify-content: center;
-
-    background-color: var(--bgColor3)
-
     ;
 }
     .full-sect h1{
@@ -798,3 +802,11 @@ button:hover{
         font-size: 48px;
         
     }
+
+/* ---------------------------------------------*/
+/* ---------- ABOUT PAGE STYLING ---------------*/
+/* ---------------------------------------------*/
+
+#about-page{
+    background-image: url(./pictures/Panther\ II.png);
+}
