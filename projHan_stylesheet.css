@@ -667,8 +667,8 @@ button:hover{
 #full-section-gallery{
 
     --col-num: 3;
-    --col-gap: 0.8vh;
-    --ro-gap: 0.5vw;
+    --col-gap: .75em;
+    --ro-gap: 1em;
 
     width: 98vw;
 
@@ -708,21 +708,22 @@ button:hover{
 
 }
 .tri-column{
-    display: grid;
+    
+    width: 75vw;
 
     align-content: top;
     align-items: top;
     justify-content: center;
 
-    grid-template-columns: 1fr 1fr 1fr;
-
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
 }
+    .tri-column .text{
+        width: 60%;
+    }
     .tri-column div{
     
-    width: 20vw;
-
-    padding: 0 2.5vw 0;
+    width: 100%;
 
     display: grid;
     justify-items: center;
